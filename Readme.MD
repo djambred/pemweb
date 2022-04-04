@@ -6,7 +6,7 @@
 
 # 2. CREATE MODEL SEEDER MIGRATION CONTROLLER FACTORY
 - php artisan make:model NamaModelnya -mcfs --resource
-- example : php artisan make:model Mahasiswa -mcfs --resource
+- example = php artisan make:model Mahasiswa -mcfs --resource
 
 # 3. CREATE VIEW
 - php artisan make:command MakeViewCommand
@@ -105,4 +105,4 @@ class MakeViewCommand extends Command
 ```
 
 - php artisan make:view NamaViewnya
-- php artisan make:view Home
+- example = php artisan make:view Home
