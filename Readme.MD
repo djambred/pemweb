@@ -113,3 +113,9 @@ class MakeViewCommand extends Command
 
 # 5. UNTUK ROLLBACK DATABASE
 - php artisan migrate:rollback
+
+
+##### REFERENSI BISA DIAMBIL 
+```
+https://shared.djambred.my.id/Laravel/
+```
