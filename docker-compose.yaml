@@ -19,7 +19,7 @@ services:
       context: ./nginx
     image: "${COMPOSE_PROJECT_NAME}/${REPOSITORY_NAME}_nginx:${IMAGE_TAG}"
     container_name: "${REPOSITORY_NAME}_nginx"
-    hostname: "laracom-nginx"
+    hostname: "pert2-nginx"
     ports:
       - "80:80"
     volumes:
