@@ -106,3 +106,10 @@ class MakeViewCommand extends Command
 
 - php artisan make:view NamaViewnya
 - example = php artisan make:view Home
+
+
+# 4. UNTUK MIGRATE DATABASE
+- php artisan migrate
+
+# 5. UNTUK ROLLBACK DATABASE
+- php artisan migrate:rollback
