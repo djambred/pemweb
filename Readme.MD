@@ -12,6 +12,7 @@
 - php artisan make:command MakeViewCommand
 - Pastekan codingan dibawah ini ke dalam folder app/Console/Commands/MakeViewCommand.php dan simpan
 
+```
 <?php
 
 namespace App\Console\Commands;
@@ -101,6 +102,7 @@ class MakeViewCommand extends Command
     }
 
 }
+```
 
 - php artisan make:view NamaViewnya
 - php artisan make:view Home
