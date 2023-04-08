@@ -1,0 +1,24 @@
+version : '3'
+services:
+  pemweb:
+    build: ./php
+    image: pemweb_php:latest
+    container_name: pemweb
+    hostname: "project-akhir"
+    volumes:
+      - ./src:/var/www/html
+      - ./php/www.conf:/usr/local/etc/php-fpm.d/www.conf
+    working_dir: /var/www/html
+
+  nginx_pemweb:
+    build: ./nginx
+    image: nginx_pemweb:latest
+    container_name: nginx_pemweb
+    hostname: "nginx_pemweb"
+    ports:
+      - "80:80"
+    volumes:
+      - ./src:/var/www/html
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - pemweb
