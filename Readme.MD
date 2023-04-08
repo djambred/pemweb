@@ -2,7 +2,7 @@
 
 
 # 1. CREATE PROJECT 
-- composer create-project laravel/laravel . "8.*"
+- composer create-project laravel/laravel . "9.*"
 
 # 2. CREATE MODEL SEEDER MIGRATION CONTROLLER FACTORY
 - php artisan make:model NamaModelnya -mcfs --resource

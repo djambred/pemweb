@@ -1,3 +1,4 @@
+
 FROM php:8.0-fpm
 
 ENV PS1="\u@\h:\w\\$ "
@@ -28,7 +29,7 @@ RUN apt-get update && \
 # Install soap extention
 RUN docker-php-ext-install soap
 
-# Install for image manipulationdock
+# Install for image manipulation
 RUN docker-php-ext-install exif
 
 # Install the PHP pcntl extention
@@ -45,7 +46,7 @@ RUN docker-php-ext-install zip
 
 # Install the PHP pdo_mysql extention
 RUN docker-php-ext-install pdo_mysql
-
+RUN docker-php-ext-install mysqli
 # Install the PHP pdo_pgsql extention
 RUN docker-php-ext-install pdo_pgsql
 
@@ -56,7 +57,7 @@ RUN docker-php-ext-install bcmath
 # PHPRedis:
 #####################################
 RUN pecl install redis && docker-php-ext-enable redis
-RUN pecl install mongodb && docker-php-ext-enable mongodb
+
 #####################################
 # Imagick:
 #####################################
