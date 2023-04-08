@@ -1,0 +1,29 @@
+version: "3"
+
+services:
+
+  pert2:
+    build:
+      context: ./php
+    image: "${COMPOSE_PROJECT_NAME}/${REPOSITORY_NAME}_php:${IMAGE_TAG}"
+    container_name: "${REPOSITORY_NAME}_php"
+    hostname: "pert2"
+    volumes:
+      - ./src:/var/www/
+      - ./php/www.conf:/usr/local/etc/php-fpm.d/www.conf
+    working_dir: /var/www/
+
+
+  pert2_nginx:
+    build:
+      context: ./nginx
+    image: "${COMPOSE_PROJECT_NAME}/${REPOSITORY_NAME}_nginx:${IMAGE_TAG}"
+    container_name: "${REPOSITORY_NAME}_nginx"
+    hostname: "pert2-nginx"
+    ports:
+      - "80:80"
+    volumes:
+      - ./src:/var/www/
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - pert2
