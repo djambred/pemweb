@@ -1,4 +1,5 @@
-# Deployment
+# Deployment (Execute in Container)
+- docker exec -it uts_php bash
 - Run cp .env.example .env file to copy example file to .env
 - Then edit your .env file with DB credentials and other settings.
 - Run composer install command
